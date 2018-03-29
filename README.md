@@ -9,7 +9,7 @@ O projeto é dividido em duas partes que precisam se encaixar:
 
 Este software se destina essencialmente para sistemas Linux, porém com diferentes distribuições.
 
-A seguir serão descritos brevemente ambos os módulos, inclusive para guiar a implementação...
+A seguir, serão descritos brevemente ambos os módulos, inclusive para guiar a implementação...
 
 ## Módulo campo
 
