@@ -16,8 +16,15 @@ A seguir serão descritos brevemente ambos os módulos, inclusive para guiar a i
 Requisitos:
 * Portabilidade em diferentes distribuições Linux
 * Obter as informações de hardware mais importantes do computador em questão. A saber:
-  * Placa-mãe: modelo, número de slots de memória, número de portas SATA
-  * Memória RAM: Tamanho, Frequência de operação, Tamanho de cada pente, Frequência de cada pente
+	* Placa-mãe
+		* modelo
+		* número de slots de memória
+		* número de portas SATA
+	* Memória RAM
+		* Tamanho
+		* Frequência de operação
+		* Tamanho de cada pente
+		* Frequência máxima de cada pente
 
 ## Módulo central
 
