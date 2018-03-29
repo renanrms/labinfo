@@ -1,7 +1,7 @@
 # labinfo
 
 Software pra obtenção e registro de especificações de computadores em um contexto de multiplos laboratórios de informática.
-Este é um software em fase de projeto/desenvolvimento que surge das necessidades do Laboratório de Informática para a Educação na Universidade Federal do Rio de Janeiro - LIpE/UFRJ.
+Este é um software em fase de projeto/desenvolvimento que surge das necessidades do Laboratório de Informática para a Educação na Universidade Federal do Rio de Janeiro -- LIpE/UFRJ.
 
 O projeto é dividido em duas partes que precisam se encaixar:
 * Um programa para obter as informações dos computadores a ser utilizado nos laboratórios, em campo. (módulo campo)
