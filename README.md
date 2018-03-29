@@ -11,7 +11,7 @@ Este software se destina essencialmente para sistemas Linux, porém com diferent
 
 A seguir, serão descritos brevemente ambos os módulos, inclusive para guiar a implementação...
 
-## Módulo campo
+### Módulo campo
 
 Requisitos:
 * Portabilidade em diferentes distribuições Linux
@@ -26,7 +26,7 @@ Requisitos:
 		* Tamanho de cada pente
 		* Frequência máxima de cada pente
 
-## Módulo central
+### Módulo central
 
-## Método de implementação
+### Método de implementação
 
