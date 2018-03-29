@@ -14,6 +14,7 @@ A seguir, serão descritos ambos os módulos, inclusive para guiar a implementa�
 ### Módulo extrator
 
 #### Requisitos
+
 * Portabilidade em diferentes distribuições Linux sem pressupor instalação de programas excepcionais
 * Ser capaz de funcionar apartir do pendrive
 * Obter as especificações, as informações de uso e os dados de saúde do hardware mais importantes do computador em questão
@@ -22,6 +23,7 @@ A seguir, serão descritos ambos os módulos, inclusive para guiar a implementa�
 * Possuir uma saída legível idependentemente do módulo central, em prol da flexibilidade de utilização
 
 #### Funcionamento em etapas
+
 1. Verificar se está rodando com permissões de root e, caso contrário, abortar.
 2. Obter informações a partir do usuário
 	* Nome que identifique o computador de forma única (código do PC)
@@ -63,7 +65,6 @@ A seguir, serão descritos ambos os módulos, inclusive para guiar a implementa�
 		* Capacidades (leitura/escrita CD, leitura/escrita DVD)
 		* Porta (SATA, PATA/IDE)
 
+#### Método de implementação
+
 ### Módulo central
-
-### Método de implementação
-
