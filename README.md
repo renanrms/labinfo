@@ -74,4 +74,8 @@ Para coseguir isto, faremos o programa em Python e quando for preciso lidar com 
 * Manter um registro com pastas por computador contendo todo o histórico de cada um.
 * Manter um registro dos laboratórios existentes com histórico dos PCs pertencentes.
 * Permitir a inserção de informações através de pastas com os dados atualizados dos PCs de um mesmo laboratório e incorporá-las aos registros descritos acima.
-* 
+* Permitir alterações como, inserir novos laboratórios, alterar seus dados, excluir PCs e movê-los entre os laboratórios.
+* Gerar estatísticas por laboratório, como quantidade de computadores, problemas e possibilidades de otimização.
+* Permitir visualização das informações por computador e por laboratório.
+* Disponibilizar a informação de qual o próximo código a ser cadastrado.
+ 	* Talvez gerar de forma automática as próximas etiquetas para impressão.
