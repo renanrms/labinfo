@@ -9,3 +9,9 @@ O Labinfo é dividido em duas partes que precisam se encaixar:
 * Um programa para gerenciamento das informações obtidas, utilizado em um computador central. (módulo central)
 
 Para informações mais detalhadas sobre o projeto e como contribuir acesse a [Wiki](https://github.com/renanrms/labinfo/wiki).
+
+### Contato
+
+E-mail do LIpE: lipe@poli.ufrj.br
+
+E-mail do desenvolvedor: renanpassos@poli.ufrj.br
