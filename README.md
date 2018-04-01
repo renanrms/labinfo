@@ -7,7 +7,7 @@ O projeto é dividido em duas partes que precisam se encaixar:
 * Um programa para obter as informações dos computadores a ser utilizado nos laboratórios, em campo. (módulo extrator)
 * Um programa para gerenciamento das informações obtidas, utilizado em um computador central. (módulo central)
 
-Este software se destina essencialmente para sistemas Linux, porém com diferentes distribuições.
+Este software se destina, a princípio, para sistemas Linux, devendo funcionar em diferentes distribuições.
 
 A seguir, serão descritos ambos os módulos, inclusive para guiar a implementação...
 
@@ -22,6 +22,8 @@ A seguir, serão descritos ambos os módulos, inclusive para guiar a implementa�
 * Armazenar informações que facilitem uma posterior organização dor registros: horário, nome do computdor e nome do laborátorio 
 * Possuir uma saída legível idependentemente do módulo central, em prol da flexibilidade de utilização
 
+Para coseguir isto, faremos o programa em Python e quando for preciso lidar com arquivos XML, usaremos a biblioteca xmltodict para converter XML em dicionário (também conhecido como mapa) e dicionário em XML.
+
 #### Funcionamento em etapas
 
 1. Verificar se está rodando com permissões de root e, caso contrário, abortar.
@@ -33,7 +35,7 @@ A seguir, serão descritos ambos os módulos, inclusive para guiar a implementa�
 4. Armazenar as saídas dos comandos a seguir em arquivos
 	* lshw -xml (nome: lshw.xml)
 	* dmesg (nome: dmesg.txt)
-5. Obter as informações a seguir e armazenar em um arquivo XML (nome: <codigo_pc>.labinfo)
+5. Obter as informações a seguir e armazenar em um arquivo XML (nome: <codigo_pc>.xml)
 	* Versão do Labinfo
 	* Data com precisão de segundos em formato para ordenação (aaaammddhhss)
 	* Placa-mãe
@@ -64,7 +66,5 @@ A seguir, serão descritos ambos os módulos, inclusive para guiar a implementa�
 		* Modelo
 		* Capacidades (leitura/escrita CD, leitura/escrita DVD)
 		* Porta (SATA, PATA/IDE)
-
-#### Método de implementação
 
 ### Módulo central
