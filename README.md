@@ -31,7 +31,7 @@ Para coseguir isto, faremos o programa em Python e quando for preciso lidar com 
 	* Nome que identifique o computador de forma única (código do PC)
 	* Selecionar pasta do laboratório em quastão
 	* Confirmação do horário
-3. Criar Pasta para as informações do computador, nomeada com o seu código.
+3. Criar pasta para as informações do computador, nomeada com o seu código.
 4. Armazenar as saídas dos comandos a seguir em arquivos
 	* lshw -xml (nome: lshw.xml)
 	* dmesg (nome: dmesg.txt)
@@ -68,3 +68,10 @@ Para coseguir isto, faremos o programa em Python e quando for preciso lidar com 
 		* Porta (SATA, PATA/IDE)
 
 ### Módulo central
+
+#### Requisitos
+
+* Manter um registro com pastas por computador contendo todo o histórico de cada um.
+* Manter um registro dos laboratórios existentes com histórico dos PCs pertencentes.
+
+
