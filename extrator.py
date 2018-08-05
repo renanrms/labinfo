@@ -70,7 +70,7 @@ else:
 
 # Agora inicializamos o dicionário e atribuímos os dados:
 
-HWinfo = {
+PCinfo = {
 	"Placa-mae" : {} ,
 	"CPU" : {} ,
 	"RAM" : {} ,
@@ -82,7 +82,7 @@ HWinfo = {
 
 ## Obtém os dados do hardware:
 
-HWinfo["CPU"]["largura"] = lshw_dict["list"]["node"]["width"]
+PCinfo["CPU"]["largura"] = lshw_dict["list"]["node"]["width"]
 
 ### COMPLETAR CÓDIGO ###
 
@@ -94,21 +94,25 @@ HWinfo["CPU"]["largura"] = lshw_dict["list"]["node"]["width"]
 
 ### INSERIR CÓDIGO ###
 
-# Transforma o XML em dicionário e grava em arquivo:
+# Transforma o dicionário em XML e grava em arquivo:
 
-HWinfo = {"List" : HWinfo}  # O método exige que haja um nó raiz no dicionário.
-HWinfo_XML = xmltodict.unparse(HWinfo)
+PCinfo = {"List" : PCinfo}  # O método exige que haja um nó raiz no dicionário.
+PCinfo_XML = xmltodict.unparse(PCinfo)
+
+## Identa a string XML.
+
+### INSERIR CÓDIGO ###
 
 print ("Gravando informações em arquivo... ")
 try:
-	HWinfo_file = open("18.01.001.xml", 'w')
-	HWinfo_file.write(HWinfo_XML + "\n")
-	HWinfo_file.close()
+	PCinfo_file = open("18.01.001.xml", 'w')
+	PCinfo_file.write(PCinfo_XML + "\n")
+	PCinfo_file.close()
 	print ("OK!")
 except Exception as e:
     print ("Erro: " + str(e))
 
-# Posiciona os arquivos e altera as permissões para que usuários possam mover os arquivos (chmod 644).
+# Posiciona os arquivos e altera as permissões para que usuários comuns possam mover os arquivos (chmod 666).
 
 ### INSERIR CÓDIGO ###
 
