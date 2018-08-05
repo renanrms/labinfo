@@ -8,6 +8,7 @@
 
 import lib.xmltodict as xmltodict
 import os
+from datetime import datetime
 
 
 # Verifica se está com privilégios de super-usuário:
@@ -25,6 +26,20 @@ if (os.geteuid() != 0):
 
 # Solicita dados ao usuário:
 
+## Confirma data e hora atuais:
+
+now = datetime.now()
+
+answer = input ("A informação de data e hora do sistema (" + now.strftime("%d/%m/%Y %H:%M") + ") está correta? (S/N) ")
+
+if not (answer == "S" or answer == "s"):
+	print ("")
+	print ("A data e a hora são importantes para o registro.")
+	print ("Acerte-as primeiro e rode o programa novamente.")
+	exit ()
+
+### INSERIR CÓDIGO ###
+
 ## Solicita o código de registro do computador:
 
 ### INSERIR CÓDIGO ###
@@ -33,9 +48,6 @@ if (os.geteuid() != 0):
 
 ### INSERIR CÓDIGO ###
 
-## Confirma data e hora atuais:
-
-### INSERIR CÓDIGO ###
 
 # Obtém informações de hardware pelo lshw:
 
@@ -116,10 +128,3 @@ except Exception as e:
 # Posiciona os arquivos e altera as permissões para que usuários comuns possam mover os arquivos (chmod 666).
 
 ### INSERIR CÓDIGO ###
-
-
-
-# Testes
-#print (HWinfo)  # Visualiza o dicionário final.
-#print (HWinfo_XML)  # Visualizao xml que vai para o arquivo.
-#print (xmltodict.parse(HWinfo_XML))  # Visualiza o dicionário que seria obtido deste XML pelo módulo central.
