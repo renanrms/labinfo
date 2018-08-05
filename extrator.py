@@ -71,8 +71,14 @@ else:
 # Agora inicializamos o dicionário e atribuímos os dados:
 
 PCinfo = {
-	"Placa-mae" : {} ,
-	"CPU" : {} ,
+	"Placa-mae" : {
+		"Modelo" : "" ,
+	} ,
+	"CPU" : {
+		"Modelo" : "" ,
+		"Arquitetura" : "" ,
+		"Frequência" : ""
+	} ,
 	"RAM" : {} ,
 	"Armazenamento" : {} ,
 	"Driver optico" : {} ,
@@ -97,11 +103,7 @@ PCinfo["CPU"]["largura"] = lshw_dict["list"]["node"]["width"]
 # Transforma o dicionário em XML e grava em arquivo:
 
 PCinfo = {"List" : PCinfo}  # O método exige que haja um nó raiz no dicionário.
-PCinfo_XML = xmltodict.unparse(PCinfo)
-
-## Identa a string XML.
-
-### INSERIR CÓDIGO ###
+PCinfo_XML = xmltodict.unparse(PCinfo, encoding='utf-8', pretty=True)
 
 print ("Gravando informações em arquivo... ")
 try:
