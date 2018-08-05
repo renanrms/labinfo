@@ -11,16 +11,15 @@ import os
 
 
 # Verifica se está com privilégios de super-usuário:
-# 	Ver se é possível pedir a senha e obter os privilégios aqui.
-
-# status_comando = os.system("sudo --validate")
+###	Ver se é possível pedir a senha e obter os privilégios aqui.
+### Dar boas práticas de programação no uso das cores e aplicar às outras mensagens do programa.
 
 if (os.geteuid() != 0):
-	print ("AVISO: você deveria executar este programa como super-usuário.")
+	print ("\033[1m" + "AVISO: " + "\033[31m" + "você deveria executar este programa como super-usuário." + "\033[0m")
 	print ("       Sem privilégios de super-usuário algumas informações não podem ser acessadas.")
 	print ("")
-	print ("USO: sudo python3 extrator.py")
-	print ("OU   su")
+	print ("\033[1m" + "USO: " + "\033[0m" + "sudo python3 extrator.py")
+	print ("\033[1m" + " OU: " + "\033[0m" + "su")
 	print ("     python3 extrator.py")
 	print ("")
 
