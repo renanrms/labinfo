@@ -2,3 +2,4 @@
 *.xml
 *.txt
 lib/__pycache__/
+**/.lshw_error_messages
