@@ -42,11 +42,37 @@ if not (answer == "S" or answer == "s"):
 
 computerCode = input ("Digite o código deste computador (formato XX.XX.XXX): ")
 
-### Inserir o tratamento do dado inputado ###
+### INSERIR O TRATAMENTO DO DADO INPUTADO ###
 
 ## Solicita a pasta do laboratório onde registrar o computador:
 
-### INSERIR CÓDIGO ###
+print ("Agora informe a pasta onde registrar o computador.")
+print ("Por padrão, o computador será registrado em uma pasta 'Labinfo - dados', ao lado da pasta deste programa.")
+print ("Dica: use a mesma pasta para os computadores de um mesmo laboratório.")
+
+### Imprime as pastas já existentes dentro do diretório padrão informado:
+
+if not (os.path.exists("../Labinfo - dados/")):
+	os.mkdir("../Labinfo - dados/")
+
+entrieList = os.listdir("../Labinfo - dados/")  # listagem do diretório.
+
+folderList = []
+for entrie in entrieList:
+	if (os.path.isdir(entrie)):
+		folderList += [entrie]
+
+if (folderList != []):
+	print ("OBS.: Já existem pastas dentro na 'Labinfo - dados':")
+	for folderName in folderList:
+		print (folderName)
+
+### Finalmente, solicita a pasta ao usuário:
+
+labFolder = input ("Nome da pasta: ")  ### Encontrar uma forma de ter um autocompletar (tecla TAB) relativo à pasta padrão do registro e não à pasta do programa.
+
+if (labFolder[0] != "/"):
+	labFolder = "../Labinfo - dados/" + labFolder
 
 # Obtém informações de hardware pelo lshw:
 
