@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 # Programa para extração de informações sobre hardware e software de um computador.
@@ -38,16 +38,15 @@ if not (answer == "S" or answer == "s"):
 	print ("Acerte-as primeiro e rode o programa novamente.")
 	exit ()
 
-### INSERIR CÓDIGO ###
-
 ## Solicita o código de registro do computador:
 
-### INSERIR CÓDIGO ###
+computerCode = input ("Digite o código deste computador (formato XX.XX.XXX): ")
+
+### Inserir o tratamento do dado inputado ###
 
 ## Solicita a pasta do laboratório onde registrar o computador:
 
 ### INSERIR CÓDIGO ###
-
 
 # Obtém informações de hardware pelo lshw:
 
