@@ -53,11 +53,11 @@ entrieList = os.listdir("../Labinfo - dados/")  # listagem do diretório.
 
 folderList = []
 for entrie in entrieList:
-	if (os.path.isdir(entrie)):
+	if (os.path.isdir("../Labinfo - dados/" + entrie)):
 		folderList += [entrie]
 
 if (folderList != []):
-	print ("OBS.: Já existem pastas dentro na 'Labinfo - dados':")
+	print ("OBS.: Já existem pastas dentro da 'Labinfo - dados':")
 	for folderName in folderList:
 		print (folderName)
 
