@@ -8,6 +8,7 @@
 
 import lib.xmltodict as xmltodict
 import os
+import re
 from datetime import datetime
 
 
@@ -73,9 +74,13 @@ if not (os.path.exists(labFolder)):
 
 ## Solicita o código de registro do computador:
 
+re_computerCode = re.compile (r'^\d\d\.\d\d\.\d\d\d$')
+
 computerCode = input ("Digite o código deste computador (formato XX.XX.XXX): ")
 
-### INSERIR O TRATAMENTO DO DADO INPUTADO ###
+while not (re_computerCode.match(computerCode)):
+	print ("Formato do código incorreto.")
+	computerCode = input ("Tente novamente (formato XX.XX.XXX): ")
 
 computerFolder = labFolder + "/" + computerCode
 
@@ -88,16 +93,16 @@ print ("Obtendo lshw... ")
 ### Aqui vai um pouco de Shell Script:
 ### redirecionaremos a saída do comando para "lshw.xml" e a saída de erro para ".lshw_error_messages".
 ### redirecionar o erro é necessário para determinar quais mensagens aparecem para o usuário.
-status_comando = os.system("lshw -xml > lshw.xml 2> .lshw_error_messages")
+status_comando = os.system("lshw -xml > '" + computerFolder + "/lshw.xml' 2> '" + computerFolder + "/.lshw_error_messages'")
 if (status_comando == 0):
     print ("OK!")
 else:
     print ("Erro ao obter lshw: " + str(status_comando))
 
 ### Remove o arquivo temporário.
-os.remove(".lshw_error_messages")
+os.remove(computerFolder + "/.lshw_error_messages")
 
-lshw_xml = open('lshw.xml', 'r')
+lshw_xml = open(computerFolder + "/lshw.xml", 'r')
 texto = lshw_xml.read()
 lshw_xml.close()
 lshw_dict = xmltodict.parse(texto) # lshw em forma de dicionário!!
@@ -106,7 +111,7 @@ lshw_dict = xmltodict.parse(texto) # lshw em forma de dicionário!!
 
 print ("Obtendo o log do kernel... ")
 
-status_comando = os.system("dmesg > dmesg.txt")  # Verificar a possibilidade de gravar a cor de cada linha neste arquivo.
+status_comando = os.system("dmesg > '" + computerFolder + "/dmesg.txt'")  # Verificar a possibilidade de gravar a cor de cada linha neste arquivo.
 if (status_comando == 0):
     print ("OK!")
 else:
@@ -151,7 +156,7 @@ PCinfo_XML = xmltodict.unparse(PCinfo, encoding='utf-8', pretty=True)
 
 print ("Gravando informações em arquivo... ")
 try:
-	PCinfo_file = open("18.01.001.xml", 'w')
+	PCinfo_file = open(computerFolder + "/18.01.001.xml", 'w')
 	PCinfo_file.write(PCinfo_XML + "\n")
 	PCinfo_file.close()
 	print ("OK!")
