@@ -1,6 +1,6 @@
 # Labinfo
 
-Software para sistemas Linux que obtém e registra as especificações de computadores em um contexto de múltiplos laboratórios de informática.
+Software para sistemas Linux que obtém e registra as especificações de computadores, assim como o estado do hardware e do software instalado, em um contexto de múltiplos laboratórios de informática.
 
 Este é um software em fase de projeto/desenvolvimento que surge das necessidades do Laboratório de Informática para a Educação na Universidade Federal do Rio de Janeiro - LIpE/UFRJ.
 
